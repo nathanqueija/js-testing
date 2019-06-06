@@ -7,9 +7,9 @@ export const expect = actual => ({
   toBeGreaterThan: expected => actual > expected
 });
 
-export const test = (title, callback) => {
+export const test = async (title, callback) => {
   try {
-    callback();
+    await callback();
     console.log(`✅ ${title}`);
   } catch (error) {
     console.error(`❌ ${title}`);
