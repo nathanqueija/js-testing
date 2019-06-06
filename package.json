@@ -6,8 +6,9 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint src",
-    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\"",
-    "format:validate": "npm run lint && prettier --list-different \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\""
+    "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\"",
+    "format": "npm run prettier -- --write",
+    "format:validate": "npm run lint && npm runprettier -- --list-different"
   },
   "author": "Nathan Queija",
   "license": "ISC",
