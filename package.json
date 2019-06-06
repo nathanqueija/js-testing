@@ -8,7 +8,8 @@
     "lint": "eslint src",
     "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\"",
     "format": "npm run prettier -- --write",
-    "format:validate": "npm run lint && npm runprettier -- --list-different"
+    "validate": "npm run lint && npm run prettier -- --list-different && npm run flow",
+    "flow": "flow"
   },
   "author": "Nathan Queija",
   "license": "ISC",
@@ -16,9 +17,11 @@
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
+    "flow-bin": "^0.100.0",
     "jest": "^24.8.0",
     "prettier": "^1.17.1"
   }
