@@ -9,7 +9,8 @@
     "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\"",
     "format": "npm run prettier -- --write",
     "validate": "npm run lint && npm run prettier -- --list-different && npm run flow",
-    "flow": "flow"
+    "flow": "flow",
+    "precommit": "npm run validate"
   },
   "author": "Nathan Queija",
   "license": "ISC",
@@ -22,6 +23,7 @@
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
     "flow-bin": "^0.100.0",
+    "husky": "^2.4.0",
     "jest": "^24.8.0",
     "prettier": "^1.17.1"
   }
