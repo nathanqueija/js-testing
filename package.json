@@ -8,9 +8,13 @@
     "lint": "eslint src",
     "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\"",
     "format": "npm run prettier -- --write",
-    "validate": "npm run lint && npm run prettier -- --list-different && npm run flow",
-    "flow": "flow",
-    "precommit": "lint-staged && npm run flow"
+    "validate": "npm run lint && npm run test && npm run prettier -- --list-different && npm run flow",
+    "flow": "flow"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged && npm run flow"
+    }
   },
   "author": "Nathan Queija",
   "license": "ISC",
